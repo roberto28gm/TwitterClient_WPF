@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Twitter_WPF">
+
+    <Style TargetType="{x:Type Button}" x:Key="b_especial">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="b1" CornerRadius="10,10,10,10"
+                                BorderBrush="#FF385B99"
+                                BorderThickness="1"
+                                Height="30" Width="75">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Transparent" Offset="1"/>
+                                <GradientStop Color="#FF14A2E4" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border Name="b2" CornerRadius="10,10,10,10" Margin="0.5,0.5,0.5,0.5"
+                                BorderThickness="1" 
+                                Opacity="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Transparent" Offset="1"/>
+                                    <GradientStop Color="#FF14A2E4" Offset="0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="b1" Property="Background" Value="#3274a3"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Foreground" Value="#d8e7ff"/>
+        <Setter Property="FontFamily" Value="Calibri"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+</ResourceDictionary>
